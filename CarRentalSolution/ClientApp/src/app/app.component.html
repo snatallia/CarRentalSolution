@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <ul class="nav flex-column" id="left">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/orders">Car orders List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cars">Cars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/clients">Clients</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!--<app-addcarorder></app-addcarorder>-->
+  <!--<app-carorder></app-carorder>-->
+</div>

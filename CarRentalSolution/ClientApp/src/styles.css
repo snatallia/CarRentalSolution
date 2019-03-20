@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color:#eee;
+  color:#333;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width:1500px;
+}
+
+.row {
+  width:100%;
+  margin:0;
+  border:0;
+}
+ .nav#left {
+    width:200px;
+    background-color:darkgrey;   
+  }
+
+  .nav#left li {
+    width: 100%;
+    
+  }
+  .nav#left li:hover {
+    background-color:gainsboro;
+  }
+
+  .nav#left li a {
+    color: #fff;
+    font-size: 20px;
+  }
+
+    .nav#left li a:hover {
+      color: #222;
+    }
+
+    .nav#left li a.active {
+      color: #222;
+    }
+
+    .table{
+      width:100%;
+
+    }

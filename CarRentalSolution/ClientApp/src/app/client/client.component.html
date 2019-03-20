@@ -1,0 +1,29 @@
+<p>clients here!!</p>
+
+<div>
+  <form>
+    <table class='table' *ngIf="clients">
+      <thead>
+        <tr>
+          <th>Car Or Id</th>
+          <th>Car ID</th>
+          <th>Client ID</th>
+          <th>PickUpDate</th>
+          <th>Drop Off Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients">
+          <td>{{client.ClientId}}</td>
+          <td>{{client.Surname}}</td>
+          <td>{{client.Name}}</td>
+          <td>{{client.Birthday}}</td>
+          <td>{{client.DriverLicenceNumber}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+</div>
+

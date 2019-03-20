@@ -1,0 +1,29 @@
+
+<h1>Car Order Data</h1>
+<p>This component demonstrates Car orders data</p>
+
+<form ngForm="carOrderForm">
+  <div class="container">
+    <label>
+      Car id:
+      <input #CarID value="{{(order | async)?.CarId}}" />
+    </label>
+    <label>
+      Client id:
+      <input #ClientID value="{{(order | async)?.ClientId}}" />
+    </label>
+    <label>
+      Pick up date:
+      <input type="date" #PickUpDate value="{{(order | async)?.PickUpDate}}" />
+    </label>
+    <label>
+      Drop off date:
+      <input type="date" #DropOffDate value="{{(order | async)?.DropOffDate}}" />
+    </label>
+
+    <button (click)="add(CarID.value,ClientID.value,PickUpDate.value,DropOffDate.value)">
+      Save
+    </button>
+    <a class="nav-link" href="orders">Cancel</a>
+  </div>
+</form>

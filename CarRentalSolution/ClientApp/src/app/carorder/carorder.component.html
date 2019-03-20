@@ -1,0 +1,39 @@
+<div>
+  <h3>Car Order Data</h3>
+  
+  <a class="nav-link" href="order/add">Add New Order</a>
+<form>
+    <table class='table' *ngIf="carOrders">
+      <thead>
+        <tr>
+          <th>Car Order Id</th>
+          <th>Car ID</th>
+          <th>Client ID</th>
+          <th>PickUpDate</th>
+          <th>Drop Off Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of carOrders">
+          <td>{{ order.CarOrderId}}</td>
+          <td>{{order.CarId}}</td>
+          <td>{{order.ClientId}}</td>
+          <td>{{order.PickUpDate}}</td>
+          <td>{{order.DropOffDate}}</td>
+          <td>
+          <td>
+            <!--<a [routerLink]="['/order/edit/', order.CarOrderId]">Edit</a>-->
+            <button class="edit" title="edit order"  [routerLink]="['/order/edit/', order.CarOrderId]"
+                    (click)="edit(order)" disabled="true">edit
+              </button>
+              |
+              <button class="delete" title="delete order"
+                      (click)="delete(order.CarOrderId)">
+                x
+              </button>
+</td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
